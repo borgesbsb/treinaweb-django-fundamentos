@@ -2,10 +2,11 @@ from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django.views.decorators.csrf import csrf_exempt
 
-from .models import Cliente
-from .forms import ClienteForm, EnderecoForm
-from .entidades import cliente, endereco
-from .services import cliente_service, endereco_service
+from ..models import Cliente
+from clientes.forms.cliente_forms import ClienteForm
+from clientes.forms.endereco_forms import EnderecoForm
+from clientes.entidades import cliente, endereco
+from clientes.services import cliente_service, endereco_service
 
 # Create your views here.
 
