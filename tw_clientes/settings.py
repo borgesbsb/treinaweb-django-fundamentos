@@ -81,7 +81,7 @@ DATABASES = {
         'NAME': 'tw_django_fundamentos',
         'USER': 'root',
         'PASSWORD': 'B12905629g',
-        'HOST': 'localhost',
+        'HOST': '10.112.25.14',
         'PORT': 3306,
     }
 }

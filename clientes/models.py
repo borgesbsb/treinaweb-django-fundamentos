@@ -27,7 +27,6 @@ class Pedido(models.Model):
         ("F", "Fazendo"),
         ("E", "Saiu para entrega"),
     )
-    
     cliente = models.ForeignKey( "Cliente", on_delete=models.CASCADE)
     data_pedido = models.DateTimeField(default=timezone.now)
     valor = models.FloatField(blank=False, null=False)
