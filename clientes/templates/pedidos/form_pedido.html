@@ -9,7 +9,7 @@ Cadastrar pedido
 
 {% block  content %}
     <form method="post"  >
-        {% csrf_token %}
+        {% csrf_token %} 
         <div class="form-group">
             {{ form_pedido.cliente.erros }}
             <label > Cliente: </label>

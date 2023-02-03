@@ -21,7 +21,6 @@ class Endereco(models.Model):
     def __str__(str):
         return self.rua
 
-
 class Pedido(models.Model):
     STATUS_CHOICES = (
         ("P", "Pedido realizado"),
@@ -29,7 +28,7 @@ class Pedido(models.Model):
         ("E", "Saiu para entrega"),
     )
     
-    cliente = models.ForeignKey("cliente", on_delete=models.CASCADE)
+    cliente = models.ForeignKey( "Cliente", on_delete=models.CASCADE)
     data_pedido = models.DateTimeField(default=timezone.now)
     valor = models.FloatField(blank=False, null=False)
     status = models.CharField(max_length=1, choices=STATUS_CHOICES, blank=False, null=False )
@@ -37,12 +36,6 @@ class Pedido(models.Model):
     
     def __str__(self):
         return self.cliente.nome
-
-
-
-
-
-
 
 class Cliente(models.Model):
     SEXO_CHOICES = (
@@ -61,4 +54,6 @@ class Cliente(models.Model):
 
     def __str__(self):
         return self.nome
+
+
 

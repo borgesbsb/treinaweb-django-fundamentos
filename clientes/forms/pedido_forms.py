@@ -1,9 +1,9 @@
 from django import forms
-from ..models import Pedido
+from ..models import Pedido, Cliente
 
 class PedidoForm(forms.ModelForm):
-    pedido = forms.ModelChoiceField(queryset=Pedido.objects.all())
+    cliente = forms.ModelChoiceField(queryset=Cliente.objects.all())
     class Meta:
         model = Pedido
-        fields = ['cliente','data_pedido', 'valor', 'status', 'observacoes' ]
+        fields = ['cliente','observacoes', 'data_pedido', 'valor','status']
     

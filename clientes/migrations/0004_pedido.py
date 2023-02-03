@@ -20,7 +20,7 @@ class Migration(migrations.Migration):
                 ('valor', models.FloatField()),
                 ('status', models.CharField(choices=[('P', 'Pedido realizado'), ('F', 'Fazendo'), ('E', 'Saiu para entrega')], max_length=1)),
                 ('observacoes', models.CharField(blank=True, max_length=50, null=True)),
-                ('cliente', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='clientes.cliente')),
+                ('cliente', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='clientes.Cliente')),
             ],
         ),
     ]
